@@ -1,0 +1,79 @@
+﻿@model IEnumerable<MVCAuthentication.Models.EPL>
+
+@{
+    ViewBag.Title = "EplLeague";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<body style="padding-top:150px; padding-left:230px;">
+
+    <h2>EplLeague</h2>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table" style="width:900px;height:300px">
+        <tr>
+            <th>
+               @Html.DisplayNameFor(model => model.CLubName)
+            </th>
+            <th>
+               @Html.DisplayNameFor(model => model.GP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Win)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Draw)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lost)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GoalFor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GoalAgainst)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Goal_Difference)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Total_Points)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CLubName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GP)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Win)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Draw)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Lost)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GoalFor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GoalAgainst)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Goal_Difference)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Total_Points)
+                </td>    
+            </tr>
+        }
+
+    </table>
+    </body>

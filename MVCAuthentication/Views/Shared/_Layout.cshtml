@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Denil Sports Social Media - @ViewBag.Title</title>
+
+    <!-- Bootstrap -->
+    <link href="@Url.Content("/css/bootstrap.css")" rel="stylesheet">
+    <link href="@Url.Content("/css/modern-business.css")" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+
+        footer { background-color:#0c1a1e; min-height:350px; font-family: 'Open Sans', sans-serif; }
+.footerleft { margin-top:50px; padding:0 36px; }    
+.logofooter { margin-bottom:10px; font-size:25px; color:#fff; font-weight:700;}
+
+.footerleft p { color:#fff; font-size:12px !important; font-family: 'Open Sans', sans-serif; margin-bottom:15px;}
+.footerleft p i { width:20px; color:#999;}
+
+
+.paddingtop-bottom {  margin-top:50px;}
+.footer-ul { list-style-type:none;  padding-left:0px; margin-left:2px;}
+.footer-ul li { line-height:29px; font-size:12px;}
+.footer-ul li a { color:#a0a3a4; transition: color 0.2s linear 0s, background 0.2s linear 0s; }
+.footer-ul i { margin-right:10px;}
+.footer-ul li a:hover {transition: color 0.2s linear 0s, background 0.2s linear 0s; color:#ff670f; }
+
+.social:hover {
+     -webkit-transform: scale(1.1);
+     -moz-transform: scale(1.1);
+     -o-transform: scale(1.1);
+ }
+ 
+ 
+
+ 
+ .icon-ul { list-style-type:none !important; margin:0px; padding:0px;}
+ .icon-ul li { line-height:75px; width:100%; float:left;}
+ .icon { float:left; margin-right:5px;}
+ 
+ 
+ .copyright { min-height:40px; background-color:#000000;}
+ .copyright p { text-align:left; color:#FFF; padding:10px 0; margin-bottom:0px;}
+ .heading7 { font-size:21px; font-weight:700; color:#d9d6d6; margin-bottom:22px;}
+ .post p { font-size:12px; color:#FFF; line-height:20px;}
+
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color:#0d47a1;height:80px" role="navigation">
+        <div class="container">
+            <div class="navbar-header" style="padding-top:10px">
+
+                <!-- You'll want to use a responsive image option so this logo looks good on devices - I recommend using something like retina.js (do a quick Google search for it and you'll find it) -->
+                @Html.ActionLink("Denil Sports Media", "Index", new { controller = "Home" }, new { @class = "navbar-brand" })
+            </div>
+
+
+
+
+
+            <div class="collapse navbar-collapse js-navbar-collapse" style="padding-top:10px;">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown mega-dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">US Edition <span class="glyphicon glyphicon-chevron-down pull-right"></span></a>
+
+                        <ul class="dropdown-menu mega-dropdown-menu row">
+                            <li class="col-sm-3">
+                                <ul>
+                                    <li class="dropdown-header" style="margin-left:3em">Latest News</li>
+                                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="item active">
+                                                <a href="http://localhost:6218/Video/RealVSBarcelona"><img src="~/Images/s5.png" class="img-responsive" alt="product 1"></a>
+                                                <h4><small>RealMadrid vs Barcelona highlights</small></h4>
+                                                @*<button class="btn btn-primary" type="button">49,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>*@
+                                            </div><!-- End Item -->
+                                            <div class="item">
+                                                <a href="http://localhost:6218/Video/Top50Best"><img src="~/Images/s7.png" class="img-responsive" alt="product 2"></a>
+                                                <h4><small>Top 50 Goals of the La liga</small></h4>
+                                                @*<button class="btn btn-primary" type="button">9,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>*@
+                                            </div><!-- End Item -->
+                                            <div class="item">
+                                                <a href="http://localhost:6218/Video/NecastlePromo"><img src="~/Images/s6.png" class="img-responsive" alt="product 3"></a>
+                                                <h4><small>Newcastle United Clinch Promotions</small></h4>
+                                                @*<button class="btn btn-primary" type="button">49,99 €</button> <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-heart"></span> Add to Wishlist</button>*@
+                                            </div><!-- End Item -->
+                                        </div><!-- End Carousel Inner -->
+                                    </div><!-- /.carousel -->
+                                    <li class="divider"></li>
+                                    <li><a href="http://localhost:6218/Home/Index">View all the Videos<span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
+                                </ul>
+                            </li>
+                            <li class="col-sm-3">
+                                <ul>
+                                    <li class="dropdown-header">League</li>
+                                    <li><a href="https://localhost:44388/Home/EplLeague">English Premiere League</a></li>
+                                    <li><a href="https://localhost:44388/Home/GermanLeague">German Bundesliga</a></li>
+                                    <li><a href="https://localhost:44388/Home/SpanishLeague">Spanish Primera Division</a></li>
+                                    <li><a href="https://localhost:44388/Home/ItalyLeague">Italian Serie A</a></li>
+                                    <li><a href="#">French League 1</a></li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown-header">FC Blogs</li>
+                                    <li><a href="#">Ronaldo Vs Messi</a></li>
+                                    <li><a href="#">Transfer Talk</a></li>
+                                </ul>
+                            </li>
+                            <li class="col-sm-3">
+                                <ul>
+                                    <li class="dropdown-header">Cups</li>
+                                    <li><a href="#">English FA Cup</a></li>
+                                    <li><a href="#">EFL Cup</a></li>
+                                    <li><a href="#">Spanish Copa del Rey</a></li>
+                                    <li><a href="#">German DFB Pokal</a></li>
+                                    <li><a href="#">Italian Coppa Italia</a></li>
+                                    <li><a href="#">French Coupe de France</a></li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown-header">Services</li>
+                                    <li><a href="https://localhost:44388/Home/Email">Send Email</a></li>
+                                    <li><a href="http://localhost:1240/ChatRoom/DenilChat">Chat With Your friends</a></li>
+                                    <li><a href="https://localhost:44388/Account/Login">Authenticate with your Social Media Account</a></li>
+                                </ul>
+                            </li>
+                            <li class="col-sm-3">
+                                <ul>
+                                    <li class="dropdown-header">Media  </li>
+                                    <li><a href="https://www.facebook.com/ESPNFC">Facebook</a></li>
+                                    <li><a href="https://twitter.com/ESPNFC ">Twitter</a></li>
+                                    <li><a href="#">Responsive Dropdown </a></li>
+                                    <li class="divider"></li>
+                                    <li class="dropdown-header">Pleae sign up for the monthly Newsletter</li>
+                                    <form class="form" role="form">
+                                        <div class="form-group">
+                                            <label class="sr-only" for="email">Email address</label>
+                                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                                        </div>
+                                        <button type="submit" onclick="alert('Thankyou For Signing up for the monthly newletter'); return true" class="btn btn-primary btn-block">Sign in</button>
+                                    </form>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </li>
+                </ul>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li id="MVCAuth" style="padding-left:15px;">
+                            <a href="http://localhost:6218/Home/Index">Videos</a>
+                        </li>
+
+                        <li id="MVCAuthentication">
+                            @Html.Partial("_LoginPartial")
+                        </li>
+
+                        <li id="MVCAuthentication" style="padding-left:15px;">
+                            @Html.ActionLink("Send Email", "Email", "Home")
+                        </li>
+
+                        <li id="MVCAuthentication">
+                            @Html.ActionLink("Contact Us", "Contact", "Home")
+                        </li>
+
+
+                        <li id="other" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Media <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li id="fullwidthpage">
+                                <a href="https://www.facebook.com/ESPNFC">Facebook</a>
+                                </li>
+                        <li id="sidebarpage">
+                        <a href="https://twitter.com/ESPNFC ">Twitter</a>
+                       
+                                </li>
+
+                        <li id="sidebarpage">
+                        <a href="#">Responsive Dropdown </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        @*<li id="authentication">
+                            @Html.ActionLink("FAQ", "Faq", "Other")
+                        </li>*@
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    @RenderBody()
+   
+    <!-- /.container -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="@Url.Content("/js/bootstrap.js")"></script>
+    <script src="@Url.Content("/js/modern-business.js")"></script>
+</body>
+</html>
