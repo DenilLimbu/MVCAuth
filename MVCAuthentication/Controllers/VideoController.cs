@@ -12,7 +12,6 @@ namespace MVCAuthentication.Controllers
 {
     public class VideoController : Controller
     {
-
         public ActionResult Index()
         {
             return View(GetFiles());
@@ -100,7 +99,6 @@ namespace MVCAuthentication.Controllers
                     con.Close();
                 }
             }
-
             return File(bytes, contentType, fileName);
         }
     }

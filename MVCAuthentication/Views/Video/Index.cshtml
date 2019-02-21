@@ -41,7 +41,6 @@
                         <a style="padding-left:80px" href="http://localhost:6218/Video/RealVSBarcelona">Click here for Barcelona VS Real Madrid</a>
 
                     }
-
                     if (file.Id == 51)
                     {
                         <a style="padding-left:120px" href="http://localhost:6218/Video/RealVSBayern">Click here for more Real Madrid VS Bayern Munich</a>
@@ -62,9 +61,6 @@
 
                 if (file.Id == 24 || file.Id == 25 || file.Id == 26)
                 {
-
-
-
                     if (file.Id == 24)
                     {
                         <tr>
@@ -89,34 +85,23 @@
 
                     if (file.Id == 25)
                     {
-
-
                         <td style="padding-left:70px">
                             <a class="player" style="height: 300px; width: 300px;  display: block" href='@Url.Action("DownloadFile", "Video", new {fileId = file.Id})'>
                             </a>
                         </td>
-
                     }
 
                     if (file.Id == 26)
                     {
-
                         <td style="padding-left:70px">
                             <a class="player" style="height: 300px; width: 300px;  display: block" href='@Url.Action("DownloadFile", "Video", new {fileId = file.Id})'>
                             </a>
                         </td>
-
                     }
-
-
-
-
-
                 }
 
                 else if (file.Id != 21 && file.Id != 51 && file.Id != 23 && file.Id != 24 && file.Id != 25 && file.Id != 26)
                 {
-
                     <tr>
                         <td style="padding-left:70px; padding-top: 70px;">
                             <h3>@file.Name</h3>
@@ -124,10 +109,7 @@
                             </a>
                         </td>
                     </tr>
-
                 }
-
-
             }
         }
     </table>
