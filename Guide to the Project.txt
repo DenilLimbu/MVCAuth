@@ -1,0 +1,10 @@
+ --->>  Guide to startup the project:
+
+1) MVCAuthetication has its Database provided in the Database_BackUp folder.
+
+Please write me an email if you have any questions on the project.
+
+
+Thank you
+
+

@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -225,6 +226,7 @@
     <Compile Include="Models\Laliga.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\PermEmail.cs" />
+    <Compile Include="Models\Video\FileModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Utilities\GenericFactory.cs" />
@@ -244,6 +246,10 @@
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\modern-business.css" />
     <Content Include="favicon.ico" />
+    <Content Include="FlowPlayer\flowplayer-3.2.12.min.js" />
+    <Content Include="FlowPlayer\flowplayer-3.2.16.swf" />
+    <Content Include="FlowPlayer\flowplayer.controls-3.2.15.swf" />
+    <Content Include="FlowPlayer\flowplayer.pseudostreaming-3.2.12.swf" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -349,10 +355,10 @@
     <Content Include="Views\Home\GermanLeague.cshtml" />
     <Content Include="Views\Home\ItalyLeague.cshtml" />
     <Content Include="Views\Home\Ero.cshtml" />
+    <Content Include="Views\Video\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Video\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

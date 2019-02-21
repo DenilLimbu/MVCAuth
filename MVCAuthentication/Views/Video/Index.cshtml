@@ -1,0 +1,144 @@
+﻿@model IEnumerable<MVCAuthentication.Models.Video.FileModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <style type="text/css">
+        body {
+            font-family: Arial;
+            font-size: 10pt;
+        }
+    </style>
+</head>
+<body style="padding-top:100px; padding-left:60px">
+
+    <fieldset>
+        @using (Html.BeginForm("Index", "Video", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <div style="padding-left:300px; padding-top:70px">
+                <input type="file" name="postedFile" style="float:left" />
+                <input type="submit" id="btnUpload" value="Upload" style="float:none; width:110px; height:30px" />
+            </div>
+        }
+
+    </fieldset>
+    <hr />
+    <table cellpadding="0" cellspacing="0">
+        @if (Model.Count() > 0)
+        {
+            foreach (var file in Model)
+            {
+                if (file.Id == 21 || file.Id == 51 || file.Id == 23)
+                {
+                    if (file.Id == 21)
+                    {
+                        <a style="padding-left:80px" href="http://localhost:6218/Video/RealVSBarcelona">Click here for Barcelona VS Real Madrid</a>
+
+                    }
+
+                    if (file.Id == 51)
+                    {
+                        <a style="padding-left:120px" href="http://localhost:6218/Video/RealVSBayern">Click here for more Real Madrid VS Bayern Munich</a>
+
+                    }
+
+                    if (file.Id == 23)
+                    {
+                        <a style="padding-left:70px" href="http://localhost:6218/Video/NecastlePromo">New Castle United Clinch Promotions</a>
+
+                    }
+                    <td style="padding-left:70px">
+                        <a class="player" style="height: 300px; width: 300px;  display: block" href='@Url.Action("DownloadFile", "Video", new {fileId = file.Id})'>
+                        </a>
+                    </td>
+
+                }
+
+                if (file.Id == 24 || file.Id == 25 || file.Id == 26)
+                {
+
+
+
+                    if (file.Id == 24)
+                    {
+                        <tr>
+                            <td style="padding-top:100px; padding-left:70px">
+                                <a href="http://localhost:6218/Video/ChelseaVSSoutham">Chelsea Vs Southampton Highlights</a>
+                            </td>
+                            <td style="padding-top:100px; padding-left:70px">
+                                <a href="http://localhost:6218/Video/TotehnHamVSBourne">Tottenham VS BourneMouth Highlights</a>
+                            </td>
+
+                            <td style="padding-top:100px; padding-left:70px">
+                                <a href="http://localhost:6218/Video/Top50Best">Top 50 Soccer Best Goals Ever</a>
+                            </td>
+
+                        </tr>
+                        <td style="padding-left:70px">
+                            <a class="player" style="height: 300px; width: 300px;  display: block" href='@Url.Action("DownloadFile", "Video", new {fileId = file.Id})'>
+                            </a>
+                        </td>
+
+                    }
+
+                    if (file.Id == 25)
+                    {
+
+
+                        <td style="padding-left:70px">
+                            <a class="player" style="height: 300px; width: 300px;  display: block" href='@Url.Action("DownloadFile", "Video", new {fileId = file.Id})'>
+                            </a>
+                        </td>
+
+                    }
+
+                    if (file.Id == 26)
+                    {
+
+                        <td style="padding-left:70px">
+                            <a class="player" style="height: 300px; width: 300px;  display: block" href='@Url.Action("DownloadFile", "Video", new {fileId = file.Id})'>
+                            </a>
+                        </td>
+
+                    }
+
+
+
+
+
+                }
+
+                else if (file.Id != 21 && file.Id != 51 && file.Id != 23 && file.Id != 24 && file.Id != 25 && file.Id != 26)
+                {
+
+                    <tr>
+                        <td style="padding-left:70px; padding-top: 70px;">
+                            <h3>@file.Name</h3>
+                            <a class="player" style="height: 300px; width: 300px;  display: block" href='@Url.Action("DownloadFile", "Video", new {fileId = file.Id})'>
+                            </a>
+                        </td>
+                    </tr>
+
+                }
+
+
+            }
+        }
+    </table>
+    <script src="~/FlowPlayer/flowplayer-3.2.12.min.js"></script>
+    <script type="text/javascript">
+    flowplayer("a.player", "/FlowPlayer/flowplayer-3.2.16.swf", {
+        plugins: {
+            pseudo: { url: "/FlowPlayer/flowplayer.pseudostreaming-3.2.12.swf" }
+        },
+        clip: { provider: 'pseudo', autoPlay: false},
+    });
+    </script>
+</body>
+</html>
