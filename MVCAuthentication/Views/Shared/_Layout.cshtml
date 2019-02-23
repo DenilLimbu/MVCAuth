@@ -117,7 +117,10 @@
                                     <li class="divider"></li>
                                     <li class="dropdown-header">Services</li>
                                     <li><a href="https://localhost:44388/Home/Email">Send Email</a></li>
-                                    <li><a href="http://localhost:1240/ChatRoom/DenilChat">Chat With Your friends</a></li>
+                                   
+                                    <li>
+                                        @Html.ActionLink("Chat with your friends", "Index", "ChatRoom")
+                                    </li>
                                     <li><a href="https://localhost:44388/Account/Login">Authenticate with your Social Media Account</a></li>
                                 </ul>
                             </li>
@@ -166,22 +169,22 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Media <b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li id="fullwidthpage">
-                                <a href="https://www.facebook.com/ESPNFC">Facebook</a>
+                                    <a href="https://www.facebook.com/ESPNFC">Facebook</a>
                                 </li>
-                        <li id="sidebarpage">
-                        <a href="https://twitter.com/ESPNFC ">Twitter</a>
-                       
+                                <li id="sidebarpage">
+                                    <a href="https://twitter.com/ESPNFC ">Twitter</a>
+
                                 </li>
 
-                        <li id="sidebarpage">
-                        <a href="#">Responsive Dropdown </a>
+                                <li id="sidebarpage">
+                                    <a href="#">Responsive Dropdown </a>
                                 </li>
                             </ul>
                         </li>
 
                         @*<li id="authentication">
-                            @Html.ActionLink("FAQ", "Faq", "Other")
-                        </li>*@
+                                @Html.ActionLink("FAQ", "Faq", "Other")
+                            </li>*@
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -191,11 +194,13 @@
     </nav>
 
     @RenderBody()
-   
+
     <!-- /.container -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="@Url.Content("/js/bootstrap.js")"></script>
     <script src="@Url.Content("/js/modern-business.js")"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
 </body>
 </html>
